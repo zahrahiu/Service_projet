@@ -26,7 +26,7 @@ import java.util.List;
                 description = "Ce service permet de gérer les projets des chercheurs.",
                 version = "1.0.0"
         ),
-        servers = @Server(url = "http://localhost:8082")
+        servers = @Server(url = "http://localhost:8083")
 )
 @RestController
 @RequestMapping("/v1/projets")

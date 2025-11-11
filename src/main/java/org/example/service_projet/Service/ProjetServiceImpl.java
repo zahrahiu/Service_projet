@@ -17,11 +17,10 @@ public class ProjetServiceImpl implements ProjetService {
 
     private final ProjetRepository repository;
     private final ProjetMapper mapper;
-    private final ChercheurClient chercheurClient; // 🧩 liaison Feign
+    private final ChercheurClient chercheurClient;
 
     @Override
     public ProjetResponseDTO createProjet(ProjetRequestDTO dto) {
-        // 🧠 vérifier que le chercheur existe avant de créer le projet
         chercheurClient.getChercheurById(dto.getChercheurId());
 
         Projet projet = mapper.DTO_TO_ENTITY(dto);
